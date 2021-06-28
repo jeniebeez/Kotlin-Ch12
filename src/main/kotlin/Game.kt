@@ -6,7 +6,7 @@ import java.lang.Math.pow
 import java.lang.Math.random
 
 fun main() {
-    val name = "Madrigal"
+
     var healthPoints = 89
     var isBlessed = true
     val isImmortal = false
@@ -20,7 +20,7 @@ fun main() {
     //Health Status
     val healthStatus = formatHealthStatus(healthPoints, isBlessed)
     //Player Status
-    printPlayerStatus(auraColor, isBlessed, name, healthStatus)
+    printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
     //Drunk Status
     val numFireballs =(2..10).random()
     printDrunkStatus(numFireballs)
