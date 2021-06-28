@@ -1,7 +1,7 @@
 class Player {
     var name = "madrigal"
         get() = field.capitalize()
-        set(value) {
+        private set(value) {
             field = value.trim() //trim刪除傳入值的前後空格
         }
     fun castFireball(numFireballs:Int =2)=
