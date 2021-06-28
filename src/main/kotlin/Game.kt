@@ -12,6 +12,7 @@ fun main() {
     val isImmortal = false
 
     val player = Player()
+    player.castFireball()
 
     val karma = (pow(random(),(110-healthPoints)/100.0)*20).toInt()//返回（random的（110-生命值/100）為幾次方(指數)的值）
     //Aura
@@ -26,8 +27,7 @@ fun main() {
 }
 
 private fun printDrunkStatus(numFireballs: Int) {
-    println("一杯Fireball酒應運而生。(x$numFireballs)")
-    println("酒醉程度：${castFireball(numFireballs)}")
+    println("酒醉程度：${drunkStatus(numFireballs)}")
 }
 
 private fun printPlayerStatus(
@@ -66,7 +66,7 @@ private fun formatHealthStatus(healthPoints: Int,
         else -> "情況不妙"
     }
 
-private fun castFireball(numFireballs:Int,
+private fun drunkStatus(numFireballs:Int,
                          drunkness:Int=numFireballs* 5)=
     when (drunkness) {
         in 1..10 -> "微醺"
